@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import DisclaimerModal from "./components/DisclaimerModal";
+import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "Peptivex | Peptide & Longevity Research Intelligence",
   description:
@@ -42,7 +43,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+  <DisclaimerModal />
+  {children}
+  <Footer />
+</body>
     </html>
   );
 }
